@@ -1,0 +1,43 @@
+{
+  "coord": {
+    "lon": -94.0443,
+    "lat": 33.4431
+  },
+  "weather": [
+    {
+      "id": 804,
+      "main": "Clouds",
+      "description": "overcast clouds",
+      "icon": "04d"
+    }
+  ],
+  "base": "stations",
+  "main": {
+    "temp": 279.1,
+    "feels_like": 275.85,
+    "temp_min": 277.44,
+    "temp_max": 280.21,
+    "pressure": 1026,
+    "humidity": 78
+  },
+  "visibility": 10000,
+  "wind": {
+    "speed": 4.63,
+    "deg": 30
+  },
+  "clouds": {
+    "all": 100
+  },
+  "dt": 1676133376,
+  "sys": {
+    "type": 2,
+    "id": 62880,
+    "country": "US",
+    "sunrise": 1676120661,
+    "sunset": 1676159798
+  },
+  "timezone": -21600,
+  "id": 4133367,
+  "name": "Texarkana",
+  "cod": 200
+}

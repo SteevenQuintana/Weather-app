@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Cali",
+    "local_names": {},
+    "lat": 3.4517923,
+    "lon": -76.5324943,
+    "country": "CO",
+    "state": "Valle del Cauca"
+  },
+  {
+    "name": "Cali",
+    "lat": 10.9461877,
+    "lon": 124.8647285,
+    "country": "PH",
+    "state": "Leyte"
+  },
+  {
+    "name": "Cali",
+    "lat": -1.3121831,
+    "lon": 110.3760309,
+    "country": "ID",
+    "state": "West Kalimantan"
+  },
+  {
+    "name": "Cali",
+    "lat": 18.0702526,
+    "lon": 120.6854973,
+    "country": "PH",
+    "state": "Ilocos Norte"
+  },
+  {
+    "name": "Cali",
+    "lat": -15.8661145,
+    "lon": -74.1886944,
+    "country": "PE",
+    "state": "Arequipa"
+  }
+]
