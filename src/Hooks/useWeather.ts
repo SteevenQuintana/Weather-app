@@ -27,8 +27,8 @@ const useWeather = () => {
   }
 
   const getCityInfo = async (value: string) => {
+    if (value.trim() === "") return
     try {
-      setIsLoading(true)
       const response = await fetch(`${config.CITY_API}&q=${value.trim()}`)
       if (!response.ok) throw new Error("Cities does not supported")
       const data = await response.json()
@@ -41,17 +41,19 @@ const useWeather = () => {
       setOptions(dataNeeded)
     } catch (err) {
       console.log(err)
-    } finally {
-      setIsLoading(false)
     }
   }
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    if (city) {
+    if (!city && options.length > 0) {
+      setCity(options[0])
+      getWeatherInfo(options[0])
+    } else if (city) {
       getWeatherInfo(city)
-      setOptions([])
     }
+    setOptions([])
+    setCity(null)
   }
 
   const onSelectOption = (option: Option) => {

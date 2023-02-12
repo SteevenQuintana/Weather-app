@@ -14,7 +14,7 @@ function App(): JSX.Element {
     isLoading,
   } = useWeather()
   return (
-    <div className="page">
+    <main className="page">
       <section className="form-section">
         <Form
           search={search}
@@ -33,7 +33,7 @@ function App(): JSX.Element {
           )}
         </section>
       )}
-    </div>
+    </main>
   )
 }
 

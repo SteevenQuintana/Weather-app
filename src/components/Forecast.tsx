@@ -6,12 +6,12 @@ import classes from "./Forecast.module.css"
 const Forecast = ({ forecast }: ForecastProps) => {
   return (
     <div className={classes.forecast}>
-      <section className={classes.general}>
+      <article>
         <DayInformation forecast={forecast} />
-      </section>
-      <section className={classes.detail}>
+      </article>
+      <article>
         <Highlights forecast={forecast} />
-      </section>
+      </article>
     </div>
   )
 }

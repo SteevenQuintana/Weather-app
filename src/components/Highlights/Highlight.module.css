@@ -5,7 +5,8 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  border-radius: 16px;
+  border-radius: 12px;
+  padding: 0.5rem 0;
 }
 
 .highlight:hover {
@@ -15,7 +16,6 @@
 
 .highlight img {
   margin: auto;
-  width: 80%;
-  height: 100px;
+  height: 80px;
   contain: content;
 }

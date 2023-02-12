@@ -1,4 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
   --background-body: #f6f6f8;
   --background: #ffffff;
@@ -23,21 +30,10 @@
   }
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   font-family: "Space Grotesk", sans-serif;
   line-height: 1.4;
-  max-width: 800px;
-  margin: 30px auto;
-  padding: 0 10px;
-  color: #363636;
   color: var(--text-main);
-  background: #fff;
   background: var(--background-body);
   text-rendering: optimizeLegibility;
 }
@@ -50,9 +46,7 @@ body {
 }
 
 input {
-  color: #1d1d1d;
   color: var(--form-text);
-  background-color: #efefef;
   background-color: var(--background);
   font-family: inherit;
   font-size: inherit;
@@ -72,9 +66,7 @@ input {
 }
 
 button {
-  color: #1d1d1d;
   color: var(--form-text);
-  background-color: #efefef;
   background-color: var(--background);
   font-family: inherit;
   font-size: inherit;
@@ -97,39 +89,22 @@ button {
 }
 
 button:hover {
-  background: #9b9b9b;
-  background: var(--button-hover);
-}
-
-input[type="button"]:hover {
-  background: #9b9b9b;
   background: var(--button-hover);
 }
 
 input:focus {
-  box-shadow: 0 0 0 2px #0096bfab;
   box-shadow: 0 0 0 2px var(--focus);
 }
 
 button:focus {
-  box-shadow: 0 0 0 2px #0096bfab;
   box-shadow: 0 0 0 2px var(--focus);
 }
 
-input[type="checkbox"]:active,
-input[type="radio"]:active,
-input[type="submit"]:active,
-input[type="reset"]:active,
-input[type="button"]:active,
-input[type="range"]:active,
-button:active {
-  transform: translateY(2px);
-}
-
-input:disabled,
-select:disabled,
-button:disabled,
-textarea:disabled {
+button:disabled {
   cursor: not-allowed;
   opacity: 0.5;
+}
+
+ul {
+  list-style: none;
 }

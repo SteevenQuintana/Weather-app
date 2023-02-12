@@ -25,6 +25,7 @@ const Form = ({
           value={search}
           onChange={handleSearch}
         />
+        <button type="submit">Search</button>
         <ul className={classes.list}>
           {options.map((option, i) => (
             <li key={`${i}- ${option.lat} - ${option.lon}`}>
@@ -34,7 +35,6 @@ const Form = ({
             </li>
           ))}
         </ul>
-        <button type="submit">Search</button>
       </form>
     </div>
   )

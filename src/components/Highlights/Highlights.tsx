@@ -11,7 +11,7 @@ import classes from "./Highlights.module.css"
 
 const Highlights = ({ forecast }: ForecastProps) => {
   return (
-    <>
+    <div className={classes.highlights}>
       <h2>Today's Highlights</h2>
       <div className={classes.container}>
         <Highlight
@@ -51,7 +51,7 @@ const Highlights = ({ forecast }: ForecastProps) => {
           unit="hPa"
         />
       </div>
-    </>
+    </div>
   )
 }
 
