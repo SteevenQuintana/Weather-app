@@ -1,6 +1,7 @@
 import useWeather from "./Hooks/useWeather"
 import "./App.css"
 import Forecast from "./components/Forecast"
+import Form from "./components/Form"
 
 function App(): JSX.Element {
   const {
@@ -14,28 +15,22 @@ function App(): JSX.Element {
   } = useWeather()
   return (
     <div className="page">
-      <h1>Weather Forecast</h1>
-      <form onSubmit={handleSubmit} className="form">
-        <input
-          type="text"
-          placeholder="Washington D.C, Ankara... "
-          value={search}
-          onChange={handleSearch}
+      <section className="form-section">
+        <Form
+          search={search}
+          options={options}
+          handleSearch={handleSearch}
+          handleSubmit={handleSubmit}
+          onSelectOption={onSelectOption}
         />
-        <ul className="options-list">
-          {options.map((option) => (
-            <li key={`${option.lat} - ${option.lon}`}>
-              <button type="button" onClick={() => onSelectOption(option)}>
-                {option.name}, {option.country}
-              </button>
-            </li>
-          ))}
-        </ul>
-        <button type="submit">Search</button>
-      </form>
+      </section>
       {forecast !== null && (
-        <section>
-          {isLoading ? <h2>Loading...</h2> : <Forecast forecast={forecast} />}
+        <section className="forecast-section">
+          {isLoading ? (
+            <h2 className="loading">Loading...</h2>
+          ) : (
+            <Forecast forecast={forecast} />
+          )}
         </section>
       )}
     </div>

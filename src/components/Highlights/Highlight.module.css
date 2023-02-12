@@ -1,0 +1,21 @@
+.highlight {
+  width: 100%;
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  border-radius: 16px;
+}
+
+.highlight:hover {
+  background-color: var(--button-hover);
+  cursor: pointer;
+}
+
+.highlight img {
+  margin: auto;
+  width: 80%;
+  height: 100px;
+  contain: content;
+}

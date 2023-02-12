@@ -1,0 +1,37 @@
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.info img {
+  transform: translateY(-40px);
+  width: 80%;
+}
+
+.generalInfo {
+  margin: 1rem;
+  transform: translateY(-100px);
+  text-align: center;
+}
+
+.generalInfo p {
+  margin-bottom: 1rem;
+}
+.temp {
+  display: flex;
+  gap: 1rem;
+}
+.temp h3 {
+  font-size: 3.5rem;
+}
+.temp > span {
+  font-size: 0.8rem;
+}
+
+.max {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}

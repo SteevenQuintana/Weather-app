@@ -7,12 +7,13 @@ import pressure from "../../assets/pressure.svg"
 import Highlight from "./Highlight"
 import { getHour } from "../../helper/format"
 import { ForecastProps } from "../../interfaces/cities"
+import classes from "./Highlights.module.css"
 
 const Highlights = ({ forecast }: ForecastProps) => {
   return (
     <>
       <h2>Today's Highlights</h2>
-      <div className="container">
+      <div className={classes.container}>
         <Highlight
           title="Humidity"
           img={humidity}

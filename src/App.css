@@ -3,67 +3,22 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-}
-
-.form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  position: relative;
-}
-
-.options-list {
-  position: absolute;
-  top: 30px;
-  left: 0;
-  list-style: none;
-  padding: 0;
-  width: 200px;
-}
-
-.options-list button {
-  width: 100%;
-  text-align: left;
-  padding: 0.5rem 1rem 0.5rem;
-}
-
-section {
   width: 100%;
 }
 
-.container {
-  display: grid;
-  max-width: 700px;
+.forecast-section {
   width: 100%;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  gap: 16px;
+  margin-top: 1rem;
 }
 
-@media screen and (min-width: 700px) {
-  .container {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  }
-}
-
-.highlights {
-  width: 100%;
-  background-color: var(--background-alt);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.loading {
+  font-size: larger;
   text-align: center;
-  border-radius: 16px;
+  margin-top: 5rem;
 }
 
-.highlights:hover {
-  background-color: var(--button-hover);
-  cursor: pointer;
-}
-
-.highlights img {
-  margin: auto;
-  width: 80%;
-  height: 100px;
-  contain: content;
+@media screen and (min-width: 800px) {
+  .page {
+    height: 100vh;
+  }
 }

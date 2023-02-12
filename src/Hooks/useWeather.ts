@@ -8,7 +8,6 @@ const useWeather = () => {
   const [search, setSearch] = useState<string>("")
   const [options, setOptions] = useState<Option[]>([])
   const [city, setCity] = useState<Option | null>(null)
-  const [error, setError] = useState<string | null>(null)
   const [isLoading, setIsLoading] = useState<boolean>(false)
   const [forecast, setForecast] = useState<Forecast | null>(null)
 
@@ -16,15 +15,15 @@ const useWeather = () => {
     const { value } = event.target
     if (value.startsWith(" ")) return
     setSearch(value)
-    // getCityInfo(value)
+    getCityInfo(value)
 
-    const dataNeeded = withCities.map((data) => ({
-      name: data.name,
-      lat: data.lat,
-      lon: data.lon,
-      country: data.country,
-    }))
-    setOptions(dataNeeded)
+    // const dataNeeded = withCities.map((data) => ({
+    //   name: data.name,
+    //   lat: data.lat,
+    //   lon: data.lon,
+    //   country: data.country,
+    // }))
+    // setOptions(dataNeeded)
   }
 
   const getCityInfo = async (value: string) => {
@@ -69,9 +68,9 @@ const useWeather = () => {
       )
       if (!response.ok) throw new Error("City not found.")
 
-      // const data = await response.json()
+      const data = await response.json()
 
-      const data = withWeather
+      // const data = withWeather
 
       const forecastInfo: Forecast = {
         name: data.name,

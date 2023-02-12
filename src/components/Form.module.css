@@ -1,0 +1,27 @@
+.search {
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  position: relative;
+}
+
+.search .list {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  list-style: none;
+  padding: 0;
+  width: 225px;
+}
+
+.list button {
+  width: 100%;
+  text-align: left;
+  padding: 0.5rem 1rem 0.5rem;
+}

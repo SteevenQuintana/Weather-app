@@ -1,3 +1,4 @@
+import classes from "./Highlight.module.css"
 interface Props {
   title: string
   img: string
@@ -7,7 +8,7 @@ interface Props {
 
 const Highlight = ({ title, img, description, unit }: Props) => {
   return (
-    <div className="highlights">
+    <div className={classes.highlight}>
       <h3>{title}</h3>
       <img src={img} alt="" />
       <p>
