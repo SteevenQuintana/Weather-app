@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
-/* :root {
+:root {
   --background-body: #f6f6f8;
   --background: #ffffff;
   --text-main: #363636;
@@ -8,7 +8,7 @@
   --button-base: #d0cfcf;
   --button-hover: #9b9b9b;
   --form-text: #1d1d1d;
-} */
+}
 
 @media (prefers-color-scheme: dark) {
   :root {
