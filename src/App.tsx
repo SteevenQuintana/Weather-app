@@ -12,6 +12,7 @@ function App(): JSX.Element {
     handleSubmit,
     onSelectOption,
     isLoading,
+    error,
   } = useWeather()
   return (
     <main className="page">
@@ -24,7 +25,8 @@ function App(): JSX.Element {
           onSelectOption={onSelectOption}
         />
       </section>
-      {forecast !== null && (
+
+      {forecast !== null && error === null && (
         <section className="forecast-section">
           {isLoading ? (
             <h2 className="loading">Loading...</h2>
@@ -33,6 +35,7 @@ function App(): JSX.Element {
           )}
         </section>
       )}
+      {error && <p>{error}</p>}
     </main>
   )
 }

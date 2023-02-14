@@ -3,12 +3,14 @@ import config from "../config/config"
 import { Forecast, Option } from "../interfaces/cities"
 import withCities from "../mocks/with-cities-results.json"
 import withWeather from "../mocks/with-weather-results.json"
+import { getData } from "../services/api"
 
 const useWeather = () => {
   const [search, setSearch] = useState<string>("")
   const [options, setOptions] = useState<Option[]>([])
   const [city, setCity] = useState<Option | null>(null)
   const [isLoading, setIsLoading] = useState<boolean>(false)
+  const [error, setError] = useState<string | null>(null)
   const [forecast, setForecast] = useState<Forecast | null>(null)
 
   const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -16,22 +18,12 @@ const useWeather = () => {
     if (value.startsWith(" ")) return
     setSearch(value)
     getCityInfo(value)
-
-    // const dataNeeded = withCities.map((data) => ({
-    //   name: data.name,
-    //   lat: data.lat,
-    //   lon: data.lon,
-    //   country: data.country,
-    // }))
-    // setOptions(dataNeeded)
   }
 
   const getCityInfo = async (value: string) => {
     if (value.trim() === "") return
     try {
-      const response = await fetch(`${config.CITY_API}&q=${value.trim()}`)
-      if (!response.ok) throw new Error("Cities does not supported")
-      const data = await response.json()
+      const data = await getData(`${config.CITY_API}&q=${value.trim()}`)
       const dataNeeded = data.map((data: any) => ({
         name: data.name,
         lat: data.lat,
@@ -40,7 +32,7 @@ const useWeather = () => {
       }))
       setOptions(dataNeeded)
     } catch (err) {
-      console.log(err)
+      setError((err as Error).message)
     }
   }
 
@@ -65,14 +57,9 @@ const useWeather = () => {
   const getWeatherInfo = async (option: Option) => {
     try {
       setIsLoading(true)
-      const response = await fetch(
+      const data = await getData(
         `${config.WEATHER_API}&lat=${option.lat}&lon=${option.lon}`
       )
-      if (!response.ok) throw new Error("City not found.")
-
-      const data = await response.json()
-
-      // const data = withWeather
 
       const forecastInfo: Forecast = {
         name: data.name,
@@ -87,7 +74,7 @@ const useWeather = () => {
 
       setForecast(forecastInfo)
     } catch (err) {
-      console.log(err)
+      setError((err as Error).message)
     } finally {
       setIsLoading(false)
     }
@@ -108,6 +95,7 @@ const useWeather = () => {
     handleSubmit,
     onSelectOption,
     isLoading,
+    error,
   }
 }
 export default useWeather
