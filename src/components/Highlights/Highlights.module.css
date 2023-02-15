@@ -5,7 +5,15 @@
   text-align: center;
   display: flex;
   flex-direction: column;
+  background-color: #3054b7ca;
+  border-radius: 16px;
 }
+@media (prefers-color-scheme: dark) {
+  .highlights {
+    background-color: #3a4957cc;
+  }
+}
+
 .highlights h2 {
   margin-bottom: 1rem;
 }

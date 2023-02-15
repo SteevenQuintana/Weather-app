@@ -6,6 +6,13 @@
   align-items: center;
   padding: 12px;
   text-align: center;
+  background-color: #3054b7ca;
+  border-radius: 16px;
+}
+@media (prefers-color-scheme: dark) {
+  .info {
+    background-color: #3a4957cc;
+  }
 }
 
 .info .img__container {

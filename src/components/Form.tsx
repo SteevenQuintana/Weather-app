@@ -16,9 +16,6 @@ const Form = ({
   handleSearch,
   onSelectOption,
 }: Props) => {
-  useEffect(() => {
-    console.log(options)
-  }, [options])
   return (
     <div className={classes.search}>
       <h1>Weather Forecast</h1>

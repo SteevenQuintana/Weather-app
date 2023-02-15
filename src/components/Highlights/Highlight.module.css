@@ -1,6 +1,7 @@
 .highlight {
   width: 100%;
   background-color: var(--background);
+  color: var(--text-bright);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,6 +12,7 @@
 
 .highlight:hover {
   background-color: var(--button-hover);
+  color: var(--text-main);
   cursor: pointer;
 }
 
